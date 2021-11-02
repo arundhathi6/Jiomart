@@ -1,0 +1,11 @@
+.details input {
+    padding: 10px;
+    width: 450px;
+    border: 1px solid #ccc;
+}
+.details div {
+    padding-top: 18px;
+}
+small {
+    font-size: 12px;
+}
