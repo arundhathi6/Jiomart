@@ -304,17 +304,15 @@ var fruits_list = [
 localStorage.setItem("fruitsList", JSON.stringify(fruits_list));
 var jiomart = JSON.parse(localStorage.getItem("fruitsList"));
 var listoffruits = document.getElementById("listoffruits");
-console.log(listoffruits);
 
 displayFruits();
-var imageDiv = "" + "imageDiv" + count + "";
-var count;
-var click = -1;
+// var imageDiv = "" + "imageDiv" + count + "";
+var count = 0;
 function displayFruits() {
   count = 0;
   jiomart.map(function (el, index) {
     var imageDiv = document.createElement("div");
-    imageDiv.setAttribute("id", "" + "imageDiv" + count + "");
+    imageDiv.setAttribute("id", "imageDiv" + count);
     var img = document.createElement("img");
     img.setAttribute("src", el.product_url);
     var h4tag = document.createElement("h4");
@@ -329,7 +327,6 @@ function displayFruits() {
     button.addEventListener("click", function (e) {
       addQty(e, index, el);
       addCart(el);
-      click++;
     });
     count++;
   });
@@ -337,8 +334,11 @@ function displayFruits() {
 
 //adding functionality to add to cart button
 var cart = [];
-var total_quantity = 0;
+var stack = [];
+var click = 0;
+var total_quantity = 1;
 function addQty(e, index, el) {
+  total_quantity = 1;
   var quantity = 1;
   e.target.remove();
   var btnDiv = document.createElement("div");
@@ -350,28 +350,58 @@ function addQty(e, index, el) {
   h3tag.textContent = quantity;
   var btn2 = document.createElement("button");
   btn2.textContent = "-";
-  btnDiv.append(btn1, h3tag, btn2);
-  document.getElementById("" + "imageDiv" + index + "").append(btnDiv);
-  btn1.addEventListener("click", function () {
+  btnDiv.append(btn2, h3tag, btn1);
+  document.getElementById("imageDiv" + index).append(btnDiv);
+
+  btn1.addEventListener("click", function (e) {
     quantity++;
     total_quantity++;
     h3tag.textContent = quantity;
     total_quantity = quantity;
+    var textContent = h3tag.textContent;
+    addCart(el, textContent);
   });
   btn2.addEventListener("click", function () {
-    if (quantity > 1) {
+    if (quantity >= 1) {
       quantity--;
       h3tag.textContent = quantity;
       total_quantity--;
+      var textContent = h3tag.textContent;
+      addCart(el, textContent);
+    } else if (quantity == 0) {
+      btnDiv.remove();
+      var button = document.createElement("button");
+      button.textContent = "Add to Cart";
+      button.setAttribute("class", "cartId");
+      document.getElementById("imageDiv" + index).append(button);
     }
   });
+  click++;
 }
-
-function addCart(el) {
-  cart.push(el);
-  localStorage.setItem("MyCart", JSON.stringify(cart));
+function addCart(el, textContent) {
+  if (textContent == undefined) {
+    el.total_quantity = 1;
+    stack.push(el);
+  } else {
+    el.total_quantity = textContent;
+    stack.push(el);
+  }
 }
 document.querySelector("#sorting button").addEventListener("click", toChart);
 function toChart() {
-  window.location.href = "myCart.html";
+  // var i = 0;
+  // while (i < click) {
+  //   cart.push(stack[stack.length - i - 1]);
+  //   i++;
+  // }
+  cart = stack.filter((c, index) => {
+    return stack.indexOf(c) === index;
+  });
+  // console.log(cart);
+  for (var i = 0; i < cart.length; i++) {
+    if (cart[i].total_quantity == "0") {
+      cart.splice(i, 1);
+    }
+  }
+  localStorage.setItem("MyCart", JSON.stringify(cart));
 }
