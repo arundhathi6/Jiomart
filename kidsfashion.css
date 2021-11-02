@@ -1,0 +1,23 @@
+.tshirts {
+  border: 1px solid silver;
+}
+
+.wholemaindiv {
+  display: flex;
+}
+
+.wholemaindiv > div {
+  margin-right: 30px;
+}
+
+.forkids {
+  margin-left: 30px;
+}
+
+img {
+  transition: all 0.2s ease-in-out;
+}
+
+img:hover {
+  transform: scale(0.9);
+}
