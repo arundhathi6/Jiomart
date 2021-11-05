@@ -68,7 +68,7 @@ h3.textContent = "Groceries Basket";
 div1.append(h3);
 var div2 = document.createElement("div");
 var p = document.createElement("p");
-p.textContent = "TotalItems: " + cartItems.length;
+p.textContent = "Total Items: " + cartItems.length;  
 var br = document.createElement("br");
 var p2 = document.createElement("p");
 p2.textContent = "₹  " + total;
@@ -104,7 +104,8 @@ function displayCartItems(cartItems) {
 displayCartItems(cartItems);
 document.querySelector("#mrpTotal span").textContent = "₹  " + total;
 document.querySelector("#mrpTotal span").style.color = "black";
-document.querySelector("#total > h3:nth-Child(2)").textContent = "₹  " + total;
+document.querySelector("#total > h3:nth-Child(2)").textContent =
+  "₹  " + (total - (total * 10) / 100);
 document.querySelector("button").addEventListener("click", changeAddress);
 function changeAddress() {
   window.location.href = "address.html";

@@ -108,6 +108,10 @@
       alert("Enter the landmark");
       found = true;
     }
+    if (data.houseNo.length <= 0) {
+      alert("Enter House No");
+      found = true;
+    }
     if (!found) {
       storedAddress.push(data);
       localStorage.setItem("savedAddresses", JSON.stringify(storedAddress));
