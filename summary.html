@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Order Summary</title>
+    <link rel="stylesheet" href="summary.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+  <body>
+    <div id="summaryContainer">
+      <div id="orderContain">
+        <h1>Order Summary</h1>
+        <h3 style="border: 1px solid red; margin-left: 2%">
+          Select Delivery Address
+        </h3>
+        <div id="buttonBox" style="border: 1px solid red; margin-left: 2%">
+          <div id="addressBox">
+            <!-- <input type="radio" value="select" id="select" /> -->
+            <!-- <a href="address.html">
+            <div id="addAddress">+ Add New Address</div>
+          </a> -->
+          </div>
+          <div><button>Change/Add Address</button></div>
+        </div>
+        <div id="cartItems"></div>
+      </div>
+      <div id="paymentContain">
+        <div id="icons">
+          <i class="fa fa-shopping-cart" style="color: #008ecc"></i>
+          <i class="fa fa-clipboard" style="color: #008ecc"></i>
+          <i class="fa fa-credit-card"></i>
+        </div>
+        <h3>Payment Details</h3>
+        <div id="mrpTotal">
+          <p>MRP TOTAL</p>
+          <span>RS. TOTAL </span>
+        </div>
+        <hr />
+        <div id="total">
+          <h3>Total Amount</h3>
+          <h3>Rs. Total</h3>
+        </div>
+        <hr />
+        <div id="paymentButton"><button>Make Payment</button></div>
+      </div>
+    </div>
+  </body>
+</html>
+<script src="summary.js"></script>

@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      input {
+        display: block;
+        border: 1px solid grey;
+        margin-bottom: 10px;
+        padding: 10px;
+      }
+      #addForm {
+        border: 1px solid none;
+        margin-right: 20px;
+      }
+      button {
+        width: 190px;
+        display: block;
+        padding: 10px;
+        background-color: #008ecc;
+      }
+      #container {
+        display: flex;
+      }
+      #savedAddress {
+        border: 1px solid black;
+        height: auto;
+      }
+      #container button:nth-child(1) {
+        height: 30px;
+      }
+      #display > div div {
+        display: flex;
+        justify-content: space-between;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <div id="addForm">
+        <h1>Add Address:</h1>
+        <form action="" id="form">
+          <input type="text" placeholder="Shipping Name" id="name" />
+          <input type="number" placeholder="Phone Number" id="phoneNumber" />
+          <input type="number" placeholder="Pin Code" id="pinCode" />
+          <input type="text" placeholder="Flat / House No." id="houseNo" />
+          <input type="number" placeholder="Floor No." id="floorNo" />
+          <input type="number" placeholder="Tower No." id="towerNo" />
+          <input
+            type="text"
+            placeholder="Building / Apartment Name"
+            id="building"
+          />
+          <input type="text" placeholder="Address" id="address" />
+          <input type="text" placeholder="Landmark / Area" id="area" />
+          <input type="text" placeholder="City,State" id="city" />
+          <label for="saveas">Save as:</label>
+          <select name="" id="saveas">
+            <option value="">Select</option>
+            <option value="Home">Home</option>
+            <option value="Work">Work</option>
+            <option value="Other">Other</option>
+          </select>
+          <button>Save Address</button>
+        </form>
+      </div>
+      <div id="savedAddress">
+        <h1>Saved Address</h1>
+        <form action="" id="display"></form>
+      </div>
+    </div>
+  </body>
+</html>
+<script>
+  document.querySelector("form").addEventListener("submit", saveAddress);
+  var storedAddress = JSON.parse(localStorage.getItem("savedAddresses")) || [];
+  function saveAddress(e) {
+    e.preventDefault();
+    var found = false;
+    var data = {
+      Name: form.name.value,
+      phoneNumber: form.phoneNumber.value,
+      pinCode: form.pinCode.value,
+      houseNo: form.houseNo.value,
+      floorNo: form.floorNo.value,
+      towerNo: form.towerNo.value,
+      address: form.address.value,
+      area: form.area.value,
+      city: form.city.value,
+      saveAs: form.saveas.value,
+    };
+    if (data.Name.length <= 0) {
+      alert("Enter Name");
+      found = true;
+    }
+    if (data.phoneNumber.length < 10 || data.phoneNumber.length > 10) {
+      alert("Incorrect Mobile Number");
+      found = true;
+    }
+    if (data.address.length < 0) {
+      alert("Enter the address");
+      found = true;
+    }
+    if (data.area.length < 0) {
+      alert("Enter the landmark");
+      found = true;
+    }
+    if (!found) {
+      storedAddress.push(data);
+      localStorage.setItem("savedAddresses", JSON.stringify(storedAddress));
+      displayItems(storedAddress);
+    }
+  }
+  function displayItems(storedAddress) {
+    document.getElementById("display").innerHTML = "";
+    storedAddress.map(function (item) {
+      var radio = document.createElement("input");
+      radio.setAttribute("type", "radio");
+      radio.setAttribute("name", "radio");
+      var mainDiv = document.createElement("div");
+      var innerDiv = document.createElement("div");
+      innerDiv.setAttribute("id", "typeOfAddress");
+      var h3 = document.createElement("h3");
+      h3.textContent = item.Name;
+      var h4 = document.createElement("h4");
+      h4.textContent = item.saveAs;
+      var p = document.createElement("p");
+      var textContent = item.address + "";
+      for (k in item) {
+        if (item[k] != "") {
+          if (k != "Name" && k != "address" && k != "saveAs") {
+            textContent = textContent + "," + item[k];
+          }
+        }
+      }
+      var totalAddress = h3.textContent + "," + textContent;
+      radio.setAttribute("value", totalAddress);
+      p.textContent = textContent;
+      innerDiv.append(h3, h4);
+      mainDiv.append(innerDiv, p);
+      document.getElementById("display").append(radio);
+      document.getElementById("display").append(mainDiv);
+    });
+    var button = document.createElement("button");
+    button.textContent = "DELIVER HERE";
+    document.getElementById("display").append(button);
+  }
+  window.addEventListener("load", function () {
+    displayItems(storedAddress);
+  });
+  document.getElementById("display").addEventListener("submit", getValue);
+  function getValue(e) {
+    e.preventDefault();
+    var selected = document.querySelector('input[name="radio"]:checked');
+    if (selected != null) {
+      localStorage.setItem("DeliveryAddress", JSON.stringify(selected.value));
+    }
+    window.location.href = "summary.html";
+  }
+</script>
