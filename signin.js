@@ -1,13 +1,11 @@
-function validate()
-{
-    var username=document.getElementsByName("username").values;
-    var password= document.getElementsByName("password").values;
-    if(username==1234 && password==1234)
-    {
-        alert("login succesfully");
-    
-    }
-    else{
-        alert("login failed");
-    }
+document.getElementById("clickMe").addEventListener("click", gotoNextPage);
+function gotoNextPage(){
+  var phone = document.getElementById("enterPhoneNo").value;
+  if((phone.length < 10)||(phone.length > 10)){
+  alert("please enter your 10 digit mobile number");
+  return;
+}
+else {
+ window.location.href = "signup.html";
+}
 }

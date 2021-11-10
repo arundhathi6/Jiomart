@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>deliever</title>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" 
+    integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+     crossorigin="anonymous"/>
+    <style>
+        *, *::after, *::before{
+            box-sizing: border-box;
+        }
+        .model{
+            position: fixed;
+            top: 30%;
+            left: 20%;
+            transform: translate(-40%, -40%);
+            border: 1px solid black;
+            border-radius: 10px;
+            z-index: 10;
+            background-color: white;
+            width: 450px;
+            max-width: 80%;
+        }
+        
+        div > h2 #where{
+            padding: 10px 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .close-button{
+            cursor: pointer;
+            border: none;
+            outline: none;
+            background: none;
+            font-size: 1.25rem;
+
+        }
+        #overlay{
+            position: fixed;
+            /* opacity:0;*/
+            top:0%;
+            left: 0;
+            right:0;
+            bottom: 0;
+            background-color: rgba(0,0,0,.7);
+            pointer-events: none;
+        }
+        #overlay.active{
+                opacity: 1;
+                pointer-events: all;
+        }
+    </style>
+</head>
+<body>
+    <div id="model active" class="model">
+        <button class="close-button">&times;</button>
+        <div><h2 id="where">Where do you want the delivery?</h2></div>
+        <div><h3>Get access to your Addresses, Orders, and Wishlist</h3></div>
+        <button id="submit">Sign in to see your address</button>
+        <div><h2>Or Enter Pincode</h2></div>
+        <div><h3>Select pincode to see product availability.</h3></div>
+        <i class="fas fa-map-marker-alt"></i><input type="text" placeholder="enter adrress">
+        <div><h2><i class="fas fa-search-location"></i>DECTED MY LOCATION</h2></div>
+    </div>
+    <div  id="overlay"></div>
+</body>
+</html>
+<script>
+
+</script>
