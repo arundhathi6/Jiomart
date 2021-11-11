@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -118,3 +119,224 @@
   </body>
 </html>
 <script src="fresh fruits.js"></script>
+=======
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /*css for adding items to the cart starts here*/
+
+      body {
+        background-color: rgb(243, 243, 243);
+      }
+
+      #container {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        gap: 30px;
+        background-color: rgb(243, 243, 243);
+      }
+
+      #category {
+        width: 20%;
+        height: 100%;
+        border: 1px solid white;
+        background-color: white;
+        padding-left: 10px;
+        /* margin-top: 7%; */
+      }
+
+      #freshfruits {
+        width: 78%;
+        height: 100%;
+        border: 1px solid gray;
+        background-color: white;
+        /* margin-top: 7%; */
+        display: flex;
+        flex-direction: column;
+      }
+
+      #advertizing {
+        display: block;
+        height: 210px;
+        border: 1px solid gray;
+        /* margin-bottom: 8px; */
+      }
+
+      #sorting {
+        border: 1px solid gray;
+        height: 90px;
+        /* margin-bottom: 8px; */
+        background-color: rgb(243, 243, 243);
+        padding: 30px;
+        box-sizing: border-box;
+      }
+      /*sorting style*/
+
+      #sort-by {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: center;
+        /* align-content: center; */
+      }
+
+      #sort-by > div:nth-child(1) {
+        color: black;
+        font-size: 19px;
+        box-sizing: border-box;
+        /* padding: px; */
+        height: 100%;
+      }
+
+      #sort-option {
+        display: flex;
+        flex-direction: row;
+      }
+
+      .btn {
+        background-color: white;
+        color: black;
+        margin: 6px;
+        font-size: 15px;
+        padding: 4px 7px;
+        height: 35px;
+        width: 100px;
+        border: 0px;
+        box-sizing: border-box;
+        border-radius: 10px;
+      }
+
+      .btn:hover {
+        border: 1px solid rgb(132, 197, 225);
+        color: rgb(132, 197, 225);
+      }
+
+      .active {
+        border: 1px solid rgb(132, 197, 225);
+        color: rgb(132, 197, 225);
+      }
+
+      #listoffruits {
+        border: 1px solid gray;
+        /* margin-top: 10px; */
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+        gap: 12px 0px;
+      }
+
+      button {
+        width: 100%;
+        height: 40px;
+        font-size: 19px;
+        background-color: rgb(30, 157, 207);
+        color: white;
+        border: 0px;
+      }
+
+      #listoffruits > div {
+        width: 220px;
+        margin-left: 10px;
+        border: 1px solid gray;
+        border-radius: 8px;
+        padding: 10px;
+      }
+
+      #category > h2,
+      h3 {
+        color: rgb(111, 114, 132);
+        line-height: 1px;
+      }
+
+      #listoffruits > div > img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .h3tag {
+        border: 1px solid none;
+      }
+
+      .btnDiv {
+        width: 100%;
+        height: 40px;
+        border: 1px solid none;
+        display: flex;
+        gap: 12px;
+        justify-content: right;
+        align-items: center;
+      }
+
+      .btnDiv button {
+        height: 40px;
+        width: 40px;
+        border-radius: 40px;
+        background-color: rgb(30, 157, 207);
+      }
+      /*css for adding items to the cart ends here*/
+    </style>
+  </head>
+
+  <body>
+    <div id="container">
+      <div id="category">
+        <h2>Category</h2>
+        <hr />
+        <h3>Fruits & Vegetables</h3>
+        <hr />
+        <h3>Diary & Bakery</h3>
+        <hr />
+        <h3>Staples</h3>
+        <hr />
+        <h3>Snackes & Branded Food</h3>
+        <hr />
+        <h3>Beverages</h3>
+        <hr />
+        <h3>Personal Care</h3>
+        <hr />
+        <h3>Home care</h3>
+        <hr />
+        <h3>Home & Kitchen</h3>
+        <hr />
+        <h3>Mom & Baby care</h3>
+        <hr />
+        <h3>Books</h3>
+      </div>
+      <div id="freshfruits">
+        <div id="advertizing">
+          <img
+            width="100%"
+            ;
+            src="https://www.jiomart.com/images/category/220/fresh-fruits-20200704.jpg"
+          />
+        </div>
+        <div id="sorting">
+          <div id="sort-by">
+            <div>Sort by:</div>
+
+            <div id="sort-option">
+              <button id="low" value="low" class="btn">Low to High</button>
+              <button id="high" value="high" class="btn">High to Low</button>
+              <button id="discount" value="discount" class="btn">
+                Discount
+              </button>
+              <button id="all" class="active btn">All Product</button>
+            </div>
+          </div>
+        </div>
+        <div id="listoffruits"></div>
+      </div>
+    </div>
+    <button id="clickme">MyCart</button>
+  </body>
+</html>
+<script src="fresh fruits.js"></script>
+>>>>>>> Stashed changes
