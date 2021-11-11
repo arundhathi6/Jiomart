@@ -136,7 +136,7 @@ function checkPrice() {
       var tub2 = document.getElementById("tub2").value;
       if (tub2 == "masai10") {
         document.getElementById("Total_Number");
-        var masai_coupon = amount - 10;
+        var masai_coupon = amount - (amount * 10) / 100;
         Total_Number.textContent = "₹" + masai_coupon;
         totalAmount = masai_coupon;
         signal = false;
@@ -149,5 +149,5 @@ function checkPrice() {
 }
 document.getElementById("div3").addEventListener("click", function () {
   localStorage.setItem("Total Amount", JSON.stringify(totalAmount));
-    window.location.href = "abc.html";
+  window.location.href = "summary.html";
 });

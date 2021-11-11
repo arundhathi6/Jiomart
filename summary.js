@@ -44,10 +44,10 @@ if (delivery.length == 0) {
         mainDiv.append(innerDiv, p1, p2, p4, p5, p6, p7, p8);
       } else if (item.floorNo == "") {
         mainDiv.append(innerDiv, p1, p3, p4, p5, p6, p7, p8);
-        console.log("Yes");
+        // console.log("Yes");
       } else {
         mainDiv.append(innerDiv, p1, p2, p3, p4, p5, p6, p7, p8);
-        console.log("Yes");
+        // console.log("Yes");
       }
       document.getElementById("wholeDiv").append(mainDiv);
     }
@@ -114,15 +114,30 @@ function displayCartItems(cartItems) {
   });
 }
 displayCartItems(cartItems);
-document.querySelector("#mrpTotal span").textContent = "₹  " + total;
-document.querySelector("#mrpTotal span").style.color = "black";
-document.querySelector("#mrpTotal ~ div span").textContent =
-  "- ₹  " + (total * 10) / 100;
-document.querySelector("#mrpTotal ~ div span").style.color = "black";
-document.querySelector("#total > h3:nth-Child(2)").textContent =
-  "₹  " + (total - (total * 10) / 100);
-document.querySelector("#total p").textContent =
-  "You Save ₹" + (total * 10) / 100;
+var totalAmount = JSON.parse(localStorage.getItem("Total Amount"));
+console.log(totalAmount);
+console.log(total);
+if (total == totalAmount) {
+  document.querySelector("#mrpTotal span").textContent = "₹  " + total;
+  document.querySelector("#mrpTotal span").style.color = "black";
+  document.querySelector("#total > h3:nth-Child(2)").textContent =
+    "₹  " + (total - (total * 10) / 100);
+} else {
+  document.querySelector("#mrpTotal span").textContent = "₹  " + total;
+  document.querySelector("#mrpTotal span").style.color = "black";
+  var hr = document.createElement("hr");
+  var p = document.createElement("p");
+  p.textContent = "Product Discount";
+  var span = document.createElement("span");
+  span.textContent = "-₹ " + (total * 10) / 100;
+  document.getElementById("productDiscount").append(p, span);
+  document.querySelector("#mrpTotal ~ div span").style.color = "black";
+  document.querySelector("#total > h3:nth-Child(2)").textContent =
+    "₹  " + (total - (total * 10) / 100);
+  var p1 = document.createElement("p");
+  p1.textContent = "You saved" + " ₹" + (total * 10) / 100;
+  document.getElementById("total").append(p1);
+}
 document.querySelector("button").addEventListener("click", changeAddress);
 function changeAddress() {
   window.location.href = "address.html";
