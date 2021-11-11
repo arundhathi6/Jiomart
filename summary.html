@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Order Summary</title>
+    <link rel="stylesheet" href="summary.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <style>
+        #orderContain {
+  border: 1px solid none;
+  margin-left: 2%;
+  font-size: 16px;
+  width: 58%;
+  font-family: sans-serif;
+}
+#buttonBox {
+  display: flex;
+  border: 1px solid none;
+  background-color: #f5f5f5;
+  /* width: 100%; */
+  margin-right: 4%;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+#addAddress {
+  border: 1px solid #aeaeae;
+  padding: 20px 0px 20px 0px;
+  width: 200px;
+  border-radius: 10px;
+  display: inline-block;
+  vertical-align: top;
+  font-family: sans-serif;
+  text-align: center;
+  font-size: 25px;
+  /* letter-spacing: 0.15px; */
+  font-style: normal;
+  font-weight: 300;
+  color: rgba(21, 27, 57, 0.6);
+}
+#addressBox {
+  background-color: none;
+  border: 1px solid none;
+  margin-left: 2%;
+  display: flex;
+  display: inline-block;
+}
+#typeOfAddress {
+  display: flex;
+  justify-content: space-between;
+}
+button {
+  background-color: #008ecc;
+  color: white;
+  width: 200px;
+  height: 50px;
+  border-radius: 5px;
+}
+#cartItems {
+  border: 1px solid none;
+  margin-top: 20px;
+  margin-left: 2%;
+  width: auto;
+}
+#cartItems > div {
+  display: flex;
+}
+#cartItems > div div {
+  border: 1px solid none;
+  margin-right: 20px;
+}
+#cartItems > div:nth-child(1) {
+  justify-content: space-between;
+}
+#paymentContain {
+  border: 1px solid none;
+  width: 40%;
+  margin-left: 2%;
+  margin-top: 2%;
+  margin-right: 2%;
+  font-family: sans-serif;
+}
+#summaryContainer {
+  border: 1px solid none;
+  display: flex;
+}
+#icons {
+  border: 1px solid none;
+  display: flex;
+  justify-content: space-between;
+  font-size: 25px;
+  vertical-align: middle;
+  /* margin-top: 2%;*/
+}
+#icons div {
+  height: 1px;
+  background-color: #aeaeae;
+  width: 20%;
+  border: 1px solid none;
+  margin-top: 10px;
+  display: inline-block;
+  vertical-align: bottom;
+}
+#app {
+  display: flex;
+}
+#mrpTotal,
+#mrpTotal ~ div {
+  border: 1px solid none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #aeaeae;
+}
+#total {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+#total h3 {
+  color: black;
+  flex-basis: 50%;
+}
+#total h3:nth-child(2) {
+  text-align: end;
+}
+#total p {
+  flex-basis: 100%;
+  text-align: end;
+  color: green;
+}
+span {
+  display: block;
+}
+h5 {
+  text-align: right;
+  color: #aeaeae;
+}
+#matterBox {
+  width: 100%;
+}
+#default {
+  background-color: red;
+  display: inline-flex;
+  color: white;
+  padding: 2px;
+  border-radius: 5px;
+}
+#paymentButton {
+  display: flex;
+  border: 1px solid none;
+  justify-content: flex-end;
+}
+#cartItems p {
+  font-size: 18px;
+  font-weight: 550;
+}
+#wholeDiv {
+  display: flex;
+  width: 100%;
+  background-color: none;
+  vertical-align: top;
+}
+#wholeDiv > div:nth-child(1) {
+  border: 1px solid none;
+  display: inline-flex;
+  margin-right: 10px;
+  /* padding-top: 20px; */
+}
+#typeOfAddress {
+  display: flex;
+}
+#addressBox h3 {
+  border: 1px solid none;
+  margin-right: 25px;
+}
+#addressBox span {
+  display: block;
+  border: 1px solid none;
+  margin-bottom: 5px;
+}
+#icons span {
+  font-size: 10px;
+  text-align: center;
+  margin-top: 8px;
+  font-weight: 550;
+}
+    </style>
+  </head>
+  <body>
+    <div id="summaryContainer">
+      <div id="orderContain">
+        <h2>Order Summary</h2>
+        <h3 style="border: 1px solid none; margin-left: 2%">
+          Select Delivery Address
+        </h3>
+        <div id="buttonBox" style="border: 1px solid none; margin-left: 2%">
+          <div id="addressBox">
+            <div id="wholeDiv">
+              <div><input type="radio" name="radio" checked /></div>
+            </div>
+            <!-- <a href="address.html">
+            <div id="addAddress">+ Add New Address</div>
+          </a> -->
+          </div>
+        </div>
+        <div id="cartItems"></div>
+      </div>
+      <div id="paymentContain">
+        <div id="icons">
+          <i class="fa fa-shopping-cart" style="color: #008ecc"></i>
+          <span>Your Cart</span>
+          <div></div>
+          <i class="fa fa-clipboard" style="color: #008ecc"></i>
+          <span>Order Summary</span>
+          <div></div>
+          <i class="fa fa-credit-card"></i>
+          <span>Payment</span>
+        </div>
+        <h3>Payment Details</h3>
+        <div id="mrpTotal">
+          <p>MRP TOTAL</p>
+          <span>RS. TOTAL </span>
+        </div>
+        <hr />
+        <div>
+          <p>Product Discount</p>
+          <span>Discount</span>
+        </div>
+        <hr />
+        <div id="total">
+          <h3>Total Amount</h3>
+          <h3>Rs. Total</h3>
+          <p></p>
+        </div>
+        <hr />
+        <div id="paymentButton"><button>Make Payment</button></div>
+      </div>
+    </div>
+  </body>
+</html>
+<script src="summary.js"></script>
