@@ -85,7 +85,7 @@ function signId() {
   document.getElementById("tub3");
   var tub2 = document.getElementById("tub2").value;
   if (tub2 == "masai10") {
-    alert("yay!!! coupon code applied. you saved ₹10");
+    alert("yay!!! coupon code applied. Discount 10% is applied on total amount");
     signal = false;
   }
   if (signal) {

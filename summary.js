@@ -121,7 +121,7 @@ if (total == totalAmount) {
   document.querySelector("#mrpTotal span").textContent = "₹  " + total;
   document.querySelector("#mrpTotal span").style.color = "black";
   document.querySelector("#total > h3:nth-Child(2)").textContent =
-    "₹  " + (total - (total * 10) / 100);
+    "₹  " + total;
 } else {
   document.querySelector("#mrpTotal span").textContent = "₹  " + total;
   document.querySelector("#mrpTotal span").style.color = "black";
