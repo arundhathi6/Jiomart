@@ -904,7 +904,7 @@ input[type=checkbox]:checked ~ .sidebarIconToggle > .diagonal.part-2 {
     top: 10px;
 }
 .listMenu li {
-    padding-left: 120px;
+    padding-left: 70px;
     list-style-type: none;
 }
 .listMenu .icon{
@@ -989,7 +989,7 @@ li button a{
 }
 .secondHead ul {
   display: flex;
-  gap: 50px;
+ 
 }
 .secondHead li {
     list-style-type: none;
