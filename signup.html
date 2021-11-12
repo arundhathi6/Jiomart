@@ -4,86 +4,59 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nav</title>
-    <link rel="stylesheet" href="nav.css">
-    <link rel="stylesheet" href="./signin.css">
-    <link rel="stylesheet" href="./signup.css">
-    <script src="signin.js"></script>
+    <title>signup</title>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" 
+    integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+     crossorigin="anonymous"/>
+    <link rel="stylesheet" href="signup.css">
 </head>
  <body>
-    <div class="header">
-        <div style="display: flex; margin-left: 70px; ">
-            <h3>JIO MART</h3>
-      
-        <ul class="listMenu">
-            <li>
-                <input type="text">
-            </li>
-           <span class="spanMenu">
-            <li>
-                <a>Sign In/Sign Up</a>
-            </li>
-            <li><a>Cart</a></li>
-           </span>
-        </ul>
-    </div>
-    </div>
-    <!-- second header -->
-    <div class="secondHead">
-        <ul>
-            <li>Deliver To </li>
-            <li>Fruits & Vegetables</li>
-            <li>Dairy & Bakery</li>
-            <li>Staples</li>
-            <li>Men</li>
-            <li>Women</li>
-            <li>Boys</li>
-            <li>Girls</li>
-            <li>Snack & Food</li>
-        </ul>
-    </div>
-  <input type="checkbox" class="openSidebarMenu" id="openSidebarMenu">
-  <label for="openSidebarMenu" class="sidebarIconToggle">
-    <div class="spinner diagonal part-1"></div>
-    <div class="spinner horizontal"></div>
-    <div class="spinner diagonal part-2"></div>
-  </label>
-  <div id="sidebarMenu">
-    <ul class="sidebarMenuInner">
-      <li>
-          <div><p>Hello, Sign In</p></div>
-          <div>
-              <button>Account</button>
-              <button>Orders</button>
-          </div>
-      </li>
-      <li><a href="#">Home</a></li>
-      <li><a href="#">Shop By Category</a></li>
-      <li><a href="#">My List</a></li>
-      <li><a href="#">JioMart Wallet</a></li>
-      <li><a href="#">JioMart cashback</a></li>
-      <li><a href="#">All Offers</a></li>
-
-     
-    </ul>
-  </div>
-
-    <!-- form -->
-    <div class="login">
-        <div class="image"><img src="https://www.jiomart.com/msassets/images/login-banner.jpg" alt=""></div>
-        <div class="details">
+   <div class="login" id="container">
+        <div id="picture"><img src="https://www.jiomart.com/msassets/images/login-banner.jpg" alt=""></div>
+        <div id="details">
             <h1 class="title">Sign In</h1>
-            <p>Sign in to complete your order</p>
-             <div><input type="text" placeholder="Enter First Name"></div>
-             <div><input type="text" placeholder="Enter Last Name"></div>
-             <div><input type="text" placeholder="Enter Email Id"></div>
-             <div><input type="text" placeholder="Enter Your Password"></div>
-             <small>Use 8 or more characters with a mix of letters & numbers</small>
-             <div><input type="text" placeholder="Enter Your Password" name="" id=""></div>
-           
+            <p>Please Enter Your Details</p>
+             <div><input id="fname" type="text" placeholder=" your first Name"></div>
+             <div id="alert"><p>Please enter your name</p></div>
+             <div><input id="lname" type="text" placeholder="Enter Last Name"></div>
+             <div><input id="email" type="text" placeholder="Enter Email Id"></div>
+             <div><input id="pass" type="text" placeholder="Enter Your Password">
+            <span>
+               <a href="#"><i class="fas fa-eye-slash" aria-hidden="true" class="eye"></a></i>
+            </span>
         </div>
+             <small>Use 8 or more characters with a mix of letters & numbers</small>
+
+             <div><input id="pass2" type="text" placeholder="Check Password">
+                <span>
+                    <a href="#"><i class="fas fa-eye-slash"></a></i>
+                 </span></div>
+             <div id="whatsapp"><h3>Enable order updates and important information on whatsapp
+                 <input id="checkbox" type="checkbox"></h3></div>
+             <hr>
+             <div>
+                 <h1>Verify</h1>
+             </div>
+             <div>
+                 <h3 style="font-weight: 100;"><span style="display: inline-flex;">We have sent 6 digit OTP on<b>+91-6789054321</b>
+                    <a href="signin.html" id="change" style="margin-left: 170px; font-weight: bold;">Change</a>
+                </span></h3>
+               
+             </div>
+             <div><input id="lname" type="text" placeholder="Enter otp"></div>
+             <span><a href="signin.html" id="resend" style="margin-left: 520px;
+                     color: red; text-decoration: none; font-size: 16px;font-weight: bold;">Resend OTP</a></span>
+
+
+             <button id="submit"><a href="thanku.html" style="text-decoration: none; color: white;">   Verify</a></button>
+             <div id="policy"><span><p>By continuing you agree to our</p><p style="color: red;"> Terms of service</p>
+               <p> and</p> <p style="color: red;">Privacy & Legal Policy</p>.</span></div>
+        </div>
+      
     </div>
-    <!-- form end -->
+   
 </body>
 </html>
-<script src="nav.js"></script>
+<script src="signup.js">
+    
+</script>

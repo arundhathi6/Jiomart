@@ -3,10 +3,6 @@ body{
   font-family: Arial, Helvetica, sans-serif !important;
   font-size: 16px;
 }
-
-
-
-
 .mySlides {
   display:none;
   
@@ -155,23 +151,21 @@ padding-left: 20px;
 transform: scale(0.9);
 }
 
-button{
+/* button{
 width: 90%;
 margin-top: 4px;
 margin-left: -10px;
 margin-bottom: 10px;
 background: #008ecc;
-/* display: flex;
-padding: auto; */
+display: flex;
+padding: auto;
 cursor: pointer;
 font-family: Arial, Helvetica, sans-serif;
 font-size: 20px;
 color: #fff;
 border-radius: 5%;
-/* font-weight: normal; */
 border-style: none
-
-}
+} */
 
 
 
@@ -525,12 +519,7 @@ height: 300px;
     margin-top: 20px;
    
   }
-
-
-
-
-
-  .menfirst {
+ .menfirst {
     border: 1px solid silver;
     margin-bottom: 20px;
     padding: 20px;
@@ -723,7 +712,7 @@ height: 300px;
 
 
 
-/* 
+
    @import url('https://fonts.googleapis.com/css?family=Varela+Round');
 html, body {
     overflow-x: hidden;
@@ -746,7 +735,12 @@ body {
     height: 80px!important;
     overflow: hidden;
     z-index: 10;
-}  
+} 
+.header h5{
+  color: white;
+  margin-top: 40px;
+  margin-left: -70px;
+} 
 
   .main {
     margin: 0 auto;
@@ -795,16 +789,23 @@ body {
 }
 .sidebarMenuInner #hello{
     background-color:#008ecc ;
-    height: 82px;
-    width: 250px;
-    margin: 0px;
-    padding: 0px;
+    width: 251px;
+    /* height: 82px; */
+}
+#hello p{
+  margin-top: 25px;
+}
+#hello button {
+  margin-left: 10px;
+  padding: 2px 20px;
+  margin-bottom: 10px;
+}
+#hello button a {
+  color: #fff !important;
 }
 .sidebarMenuInner li{
     list-style: none;
     color: #fff;
-    text-transform: uppercase;
-   
     padding: 8px;
     cursor: pointer;
     border-bottom: 1px solid rgba(255, 255, 255, 0.10); 
@@ -817,8 +818,7 @@ body {
 }
 .sidebarMenuInner li a{
     color: #fff;
-    text-transform: uppercase;
-    font-weight: bold;
+   font: 14px;
     cursor: pointer;
     margin-top: 10px;
     text-decoration: none;
@@ -904,7 +904,7 @@ input[type=checkbox]:checked ~ .sidebarIconToggle > .diagonal.part-2 {
     top: 10px;
 }
 .listMenu li {
-    padding-left: 40px;
+    padding-left: 120px;
     list-style-type: none;
 }
 .listMenu .icon{
@@ -912,12 +912,11 @@ input[type=checkbox]:checked ~ .sidebarIconToggle > .diagonal.part-2 {
     height: 20px;
 }
 .spanMenu {
-    float: right;
-    display: flex;
+
     color: #fff;
 }
 li input{
-    width: 750px;
+    width: 700px;
     padding: 7px;
     border-radius: 5px;
     border-color: transparent;
@@ -946,38 +945,56 @@ li button a{
     margin-top: -35px;
 }
 #container{
-    height: 780px;
+    height: 680px;
     overflow-x: scroll;
     background-color:grey;
 }
 #container #content1{
     font-weight: normal;
-    height: 200px;
+}
+#content1 li a {
+  font-weight: 400 !important;
+  font-size: 14px;
+ 
 }
 #container #content2{
     font-weight: normal;
-    margin-top:10px;
 }
 #container #content3{
     font-weight: normal;
     margin-top:10px;
 }
+#content3 h3 {
+  font-size: 15px;
+  font-weight: 800px !important;
+  position: relative;
+  left: 10px;
+}
+#content3 span {
+  color: #178ddb;
+  text-decoration: underline;
+}
+#content3 p {
+  font-size: 13px;
+  position: relative;
+  left: 10px;
+ }
 
-account button color issue*/
- /* .secondHead {
+ .secondHead {
     background-color: rgb(197, 197, 197);
-    padding: 5px 30px;
+    padding: 5px 20px;
     position: relative;
-    top: 40px;
+    top: 20px;
     display: flex !important;
 }
 .secondHead ul {
   display: flex;
+  gap: 50px;
 }
 .secondHead li {
     list-style-type: none;
     color: #333;
-    padding-left: 80px;
+    padding-left: 150px;
     position: relative;
     top: 10px;
 }
@@ -988,16 +1005,11 @@ account button color issue*/
     font-size: 30px;
     margin-left: 80px;
 }
-.header h3{
-    font-weight: bolder;
-    font-size: 15px;
-    color: #fff;
-    margin-top: 52px;
-    margin-left: -50px;
-}
+
 .header input{
     height: 28px;
-    width: 800px;
+    width: 700px;
+    padding: 18px 0;
 }
 #mainnav{
     padding-bottom: 0px;
@@ -1038,19 +1050,14 @@ account button color issue*/
     text-decoration: none;
     padding: 0 0 0 1px;
     line-height: 45px;
-    -webkit-transition: all 0.3s ease-in-out;
-    -moz-transition: all 0.3s ease-in-out;
-    -ms-transition: all 0.3s ease-in-out;
-    -o-transition: all 0.3s ease-in-out;
-    transition: all 0.3s ease-in-out;
-    margin-left: -110px;
+    margin-left: -60px;
     border-radius: 5px;
 }
 .submenu li a:hover {
  
     color: #008ecc;
     background-color: #fff;
-    width: 300px;
+    width: 150px;
     padding-left: -90px;
 
 } 
@@ -1066,4 +1073,78 @@ account button color issue*/
     height: 30px;
     margin-bottom:80px ;
     display: inline-block;
-}    */
+}   
+
+/* css popup */
+
+.secondHead li{
+padding-left: 50px;
+margin-left: 10px;
+}
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  transition: opacity 500ms;
+  visibility: hidden;
+  opacity: 0;
+  z-index: 999;
+}
+.overlay:target {
+  visibility: visible;
+  opacity: 1;
+}
+
+.popup {
+  margin: 70px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 5px;
+  width: 30%;
+  position: relative;
+  transition: all 5s ease-in-out;
+}
+.popup p {
+  font-size: 11px;
+}
+.popup h4 {
+  color: #333;
+  font-weight: 600;
+  font-size: 16px;
+}
+.popup button {
+  background-color: #178ddb;
+  color: #fff;
+  width: 100%;
+  padding: 8px 20px;
+  border-radius: 8px;
+}
+.popup .close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  transition: all 200ms;
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #333;
+}
+.popup .close:hover {
+  color: #06D85F;
+}
+.popup .content {
+  max-height: 30%;
+  overflow: auto;
+}
+
+@media screen and (max-width: 700px){
+  .box{
+    width: 70%;
+  }
+  .popup{
+    width: 70%;
+  }
+}
