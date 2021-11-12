@@ -1,0 +1,17 @@
+#mombaby {
+  display: grid;
+  grid-template-columns: repeat(2, 720px);
+  margin-left: 20px;
+  grid-column-gap: 1.5%;
+  grid-row-gap: 1%;
+  margin-top: 30px;
+}
+
+#mombaby > div {
+  /* border: 1px solid blue; */
+  cursor: pointer;
+}
+
+#mombaby img {
+  width: 100%;
+} 

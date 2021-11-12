@@ -1,0 +1,15 @@
+.freehomedelivery {
+  margin-top: 20px;
+  margin-right: 10px;
+  margin-left: 10px;
+  
+}
+
+.freehomedelivery img {
+  width: 100%;
+}
+
+.freehomedelivery > div {
+  margin-bottom: -10px;
+  cursor: pointer;
+}

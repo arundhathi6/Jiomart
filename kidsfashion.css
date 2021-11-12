@@ -1,12 +1,14 @@
 .tshirts {
   border: 1px solid silver;
+  border-radius: 5%;
+  padding: 20px;
 }
 
-.wholemaindiv {
+.clothesforkids {
   display: flex;
 }
 
-.wholemaindiv > div {
+.clothesforkids > div {
   margin-right: 30px;
 }
 
@@ -14,10 +16,20 @@
   margin-left: 30px;
 }
 
-img {
+ .clothesforkids img {
   transition: all 0.2s ease-in-out;
 }
 
-img:hover {
-  transform: scale(0.9);
+ .clothesforkids img:hover {
+  transform: scale(1.1);
+}
+
+
+
+.kidsfashion{
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  margin-top: 40px;
+  margin-bottom: 20px;
 }

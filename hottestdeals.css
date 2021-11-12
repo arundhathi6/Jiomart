@@ -1,15 +1,16 @@
 .menfirst {
-  border: 1px solid gray;
+  border: 1px solid silver;
   margin-bottom: 20px;
+  padding: 20px;
 }
 
 .fisthalf {
   display: flex;
 }
-img {
+ .menfirst img {
   transition: all 0.2s ease-in-out;
 }
-img:hover {
+ .menfirst img:hover {
   transform: scale(0.9);
 }
 
@@ -19,4 +20,14 @@ img:hover {
 
 .hottestdeals {
   margin-left: 30px;
+}
+
+
+.menwomen{
+  font-weight: bold;
+  margin-bottom: 20px;
+  font-size: 20px;
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+
+  margin-top: 20px;
 }

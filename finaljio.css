@@ -723,7 +723,7 @@ height: 300px;
 
 
 
-
+/* 
    @import url('https://fonts.googleapis.com/css?family=Varela+Round');
 html, body {
     overflow-x: hidden;
@@ -964,7 +964,7 @@ li button a{
 }
 
 account button color issue*/
- .secondHead {
+ /* .secondHead {
     background-color: rgb(197, 197, 197);
     padding: 5px 30px;
     position: relative;
@@ -1066,4 +1066,4 @@ account button color issue*/
     height: 30px;
     margin-bottom:80px ;
     display: inline-block;
-}   
+}    */

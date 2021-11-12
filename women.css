@@ -1,8 +1,13 @@
 .women {
   display: flex;
   margin-bottom: 20px;
+  /* border: 1px solid black;  */
+  /* padding-left: 20px; */
 }
 
+/* women>div{
+  padding: 30px;
+} */
 .dress {
   display: flex;
 }
@@ -13,24 +18,27 @@
 
 .kurtas {
   margin-right: 30px;
+  padding: 20px;
 }
 
 .starting {
   border-radius: 4%;
 }
 
-img {
+ img {
   border-radius: 4%;
   transition: all 0.2s ease-in-out;
+  width: 100%;
 }
 
-img:hover {
-  transform: scale(0.9);
+ img:hover {
+  transform: scale(1.1);
 }
 
 .secondpart {
   margin-right: 50px;
   -moz-border-radius: 4%;
   -webkit-border-radius: 4%;
-  border: 1px solid rgb(131, 131, 177);
+  border: 1px solid silver;
+  padding: 20px;
 }
