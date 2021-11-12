@@ -16,11 +16,9 @@ var userdre={
     PasswordCheck:pass2
 
 };
-//console.log(userdre);
 userArr.push(userdre);
 //console.log(userArr);
 localStorage.setItem("userdata",JSON.stringify(userArr));
 //console.log("userArr:",userArr);
 window.location.href="cart.html"
 }
-console.log(userArr);

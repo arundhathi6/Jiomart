@@ -33,7 +33,6 @@ body {
     height: 100%;
     width: 100%;
     text-align: center;
-    
 }
 .mainInner div{
     display:table-cell;
@@ -53,11 +52,9 @@ body {
     box-shadow: 3px 3px 2px;
     
 }
-
-
 #sidebarMenu li,#sidebarMenu li a {
     color: #333 !important;
-    border-bottom: 0px solid rgb(163, 163, 163);
+    border-bottom: 1px solid rgb(163, 163, 163);
     margin-top: -10px;
    
 }
@@ -65,7 +62,7 @@ body {
     margin:0;
     padding:0;
     border-top: 0px solid rgba(255, 255, 255, 0.10);
-    margin-top: -10px;
+    margin-top: -44px;
 }
 .sidebarMenuInner #hello{
     background-color:#008ecc ;
@@ -101,6 +98,7 @@ body {
     background: #008ecc;
     border: 1px solid white;
     color: white;
+    /*account color */
 }
 input[type="checkbox"]:checked ~ #sidebarMenu {
     transform: translateX(0);
@@ -282,7 +280,6 @@ li button a{
     left: 10px;
     top: 100%;
     width: 200px;
-    text-align: left;
     background-color: rgb(197, 197, 197);
     display: block;
     z-index: 9999;

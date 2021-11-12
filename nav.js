@@ -19,8 +19,8 @@ var navSlide= () => {
                     'navLinksFade 0.5s ease forward ${index / 7 + 0'
                 }
             });
-   
-});
+   }
+);
 }
 
 navSlide();
