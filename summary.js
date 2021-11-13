@@ -1,4 +1,3 @@
-
 var delivery = JSON.parse(localStorage.getItem("DeliveryAddress")) || "";
 var selectedAddress = JSON.parse(localStorage.getItem("savedAddresses"));
 if (delivery.length == 0) {
@@ -62,10 +61,14 @@ if (delivery.length == 0) {
   var buttonBox = document.createElement("div");
   var changingButton = document.createElement("button");
   changingButton.textContent = "Change/Add Address";
+  changingButton.addEventListener("click", changeAddress);
   buttonBox.append(changingButton);
   document.getElementById("buttonBox").append(buttonBox);
   document.querySelector("#wholeDiv > div:nth-Child(1)").style.paddingTop =
     "20px";
+}
+function changeAddress() {
+  window.location.href = "address.html";
 }
 var total = 0;
 var cartItems = JSON.parse(localStorage.getItem("MyCart"));
@@ -139,16 +142,7 @@ if (total == totalAmount) {
   p1.textContent = "You saved" + " ₹" + (total * 10) / 100;
   document.getElementById("total").append(p1);
 }
-document
-  .querySelector("#orderContain button")
-  .addEventListener("click", changeAddress);
-function changeAddress() {
-  window.location.href = "address.html";
-}
 
-document
-  .querySelector("#paymentButton button")
-  .addEventListener("click", makePayment);
 function makePayment() {
   window.location.href = "payment.html";
 }

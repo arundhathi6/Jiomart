@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      input {
+        display: block;
+        border: 1px solid grey;
+        margin-bottom: 10px;
+        padding: 20px;
+      }
+      select {
+        width: 150px;
+        height: 50px;
+        font-size: 18px;
+      }
+      #addForm {
+        border: 1px solid none;
+        margin-right: 20px;
+      }
+      button {
+        width: 190px;
+        display: block;
+        /* padding: 10px; */
+        background-color: #008ecc;
+      }
+      #container {
+        display: flex;
+        height: 1000px;
+        border: 1px solid none;
+        padding-left: 15%;
+      }
+      #savedAddress {
+        /* border: 1px solid black; */
+        height: auto;
+      }
+      #container button:nth-child(1),
+      button {
+        height: 40px;
+        margin-top: 30px;
+        border-radius: 20px;
+        border: none;
+      }
+      #display > div div {
+        /* display: flex; */
+        justify-content: space-between;
+        border: 1px solid none;
+      }
+      #display h3 {
+        border: 1px solid none;
+        margin-right: 25px;
+      }
+      #display > div {
+        display: flex;
+      }
+      #display span {
+        display: block;
+        border: 1px solid none;
+        margin-bottom: 5px;
+      }
+      #innerDiv {
+        display: flex;
+      }
+      #typeOfAddress {
+        display: flex;
+      }
+      #wholeDiv {
+        display: flex;
+      }
+      #wholeDiv > div:nth-child(1) {
+        border: 1px solid none;
+        display: inline-flex;
+        margin-right: 10px;
+        padding-top: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <div id="addForm">
+        <h1>Add Address:</h1>
+        <form action="" id="form">
+          <input type="text" placeholder="Shipping Name" id="name" />
+          <input type="number" placeholder="Phone Number" id="phoneNumber" />
+          <input type="number" placeholder="Pin Code" id="pinCode" />
+          <input type="text" placeholder="Flat / House No." id="houseNo" />
+          <input type="number" placeholder="Floor No." id="floorNo" />
+          <input type="number" placeholder="Tower No." id="towerNo" />
+          <input
+            type="text"
+            placeholder="Building / Apartment Name"
+            id="building"
+          />
+          <input type="text" placeholder="Address" id="address" />
+          <input type="text" placeholder="Landmark / Area" id="area" />
+          <input type="text" placeholder="City" id="city" />
+          <input type="text" placeholder="State" id="state" />
+          <label for="saveas">Save as:</label>
+          <select name="" id="saveas">
+            <option value="">Select</option>
+            <option value="Home">Home</option>
+            <option value="Work">Work</option>
+            <option value="Other">Other</option>
+          </select>
+          <button>Save Address</button>
+        </form>
+      </div>
+      <div id="savedAddress">
+        <h1>Saved Address</h1>
+        <form action="" id="display"></form>
+      </div>
+    </div>
+  </body>
+</html>
+<script>
+  document.querySelector("form").addEventListener("submit", saveAddress);
+  var storedAddress = JSON.parse(localStorage.getItem("savedAddresses")) || [];
+  function saveAddress(e) {
+    e.preventDefault();
+    var found = false;
+    var data = {
+      Name: form.name.value,
+      phoneNumber: form.phoneNumber.value,
+      pinCode: form.pinCode.value,
+      buildingName: form.building.value,
+      houseNo: form.houseNo.value,
+      floorNo: form.floorNo.value,
+      towerNo: form.towerNo.value,
+      address: form.address.value,
+      area: form.area.value,
+      city: form.city.value,
+      state: form.state.value,
+      saveAs: form.saveas.value,
+    };
+    if (data.Name.length <= 0) {
+      alert("Enter Name");
+      found = true;
+    }
+    if (data.phoneNumber.length < 10 || data.phoneNumber.length > 10) {
+      alert("Incorrect Mobile Number");
+      found = true;
+    }
+    if (data.pinCode.length < 6 || data.pinCode.length > 6) {
+      alert("Incorrect pincode");
+      found = true;
+    }
+    if (data.city.length <= 0 || data.state.length <= 0) {
+      alert("Incorrect city/state");
+      found = true;
+    }
+    if (data.address.length <= 0) {
+      alert("Enter the address");
+      found = true;
+    }
+    if (data.area.length < 0) {
+      alert("Enter the landmark");
+      found = true;
+    }
+    if (data.houseNo.length <= 0) {
+      alert("Enter House No");
+      storedAddress.map(function (item) {
+        if (item.houseNo == data.houseNo) {
+          alert("House No is already present!");
+          found = true;
+        }
+      });
+      found = true;
+    }
+    if (data.buildingName.length <= 0) {
+      alert("Enter building name");
+      found = true;
+    }
+    if (!found) {
+      storedAddress.push(data);
+      localStorage.setItem("savedAddresses", JSON.stringify(storedAddress));
+      displayItems(storedAddress);
+    }
+  }
+  function displayItems(storedAddress) {
+    document.getElementById("display").innerHTML = "";
+    storedAddress.map(function (item) {
+      var wholeDiv = document.createElement("div");
+      wholeDiv.setAttribute("id", "wholeDiv");
+      var inputDiv = document.createElement("div");
+      var radio = document.createElement("input");
+      radio.setAttribute("type", "radio");
+      radio.setAttribute("name", "radio");
+      inputDiv.append(radio);
+      var mainDiv = document.createElement("div");
+      var innerDiv = document.createElement("div");
+      innerDiv.setAttribute("id", "typeOfAddress");
+      var h3 = document.createElement("h3");
+      h3.textContent = item.Name;
+      var h4 = document.createElement("h4");
+      h4.textContent = item.saveAs;
+      innerDiv.append(h3, h4);
+      var p1 = document.createElement("span");
+      p1.textContent = item.houseNo + ",";
+      var p2 = document.createElement("span");
+      p2.textContent = item.floorNo + ",";
+      var p3 = document.createElement("span");
+      p3.textContent = item.towerNo + ",";
+      var p4 = document.createElement("span");
+      p4.textContent = item.buildingName + ",";
+      var p5 = document.createElement("span");
+      p5.textContent = item.address + ",";
+      var p6 = document.createElement("span");
+      p6.textContent = item.area + ",";
+      var p7 = document.createElement("span");
+      p7.textContent = item.city + "-" + item.pinCode + "," + item.state + ",";
+      var p8 = document.createElement("span");
+      p8.textContent = item.phoneNumber;
+      if (item.floorNo == "") {
+        mainDiv.append(innerDiv, p1, p3, p4, p5, p6, p7, p8);
+      } else if (item.towerNo == "") {
+        mainDiv.append(innerDiv, p1, p2, p4, p5, p6, p7, p8);
+      } else if (item.floorNo == "" && item.towerNo == "") {
+        mainDiv.append(innerDiv, p1, p4, p5, p6, p7, p8);
+      } else {
+        mainDiv.append(innerDiv, p1, p2, p3, p4, p5, p6, p7, p8);
+      }
+      radio.value = item.houseNo;
+      var buttonsDiv = document.createElement("div");
+      buttonsDiv.style.display = "Flex";
+      var button = document.createElement("button");
+      button.textContent = "DELIVER HERE";
+      button.addEventListener("click", getValue);
+      var button1 = document.createElement("button");
+      button1.textContent = "Edit";
+      button1.addEventListener("click", edit);
+      buttonsDiv.append(button, button1);
+      wholeDiv.append(inputDiv, mainDiv);
+      document.getElementById("display").append(wholeDiv, buttonsDiv);
+    });
+  }
+  window.addEventListener("load", function () {
+    displayItems(storedAddress);
+  });
+  function getValue(e) {
+    e.preventDefault();
+    var selected = document.querySelector('input[name="radio"]:checked');
+    if (selected != null) {
+      localStorage.setItem("DeliveryAddress", JSON.stringify(selected.value));
+    }
+    window.location.href = "summary.html";
+  }
+  function edit(e) {
+    e.preventDefault();
+    var selected = document.querySelector('input[name="radio"]:checked');
+    storedAddress.map(function (item, index) {
+      if (item.houseNo == selected.value) {
+        document.getElementById("name").value = item.Name;
+        document.getElementById("phoneNumber").value = item.phoneNumber;
+        document.getElementById("pinCode").value = item.pinCode;
+        document.getElementById("houseNo").value = item.houseNo;
+        document.getElementById("floorNo").value = item.floorNo;
+        document.getElementById("towerNo").value = item.towerNo;
+        document.getElementById("building").value = item.buildingName;
+        document.getElementById("address").value = item.address;
+        document.getElementById("area").value = item.area;
+        document.getElementById("city").value = item.city;
+        document.getElementById("state").value = item.state;
+        document.getElementById("saveas").value = item.saveAs;
+        document
+          .getElementById("form")
+          .removeEventListener("submit", saveAddress);
+        document
+          .querySelector("#form  button")
+          .addEventListener("click", function () {
+            displayEdited(index);
+          });
+        console.log(storedAddress);
+        console.log(index);
+      }
+    });
+  }
+  function displayEdited(index) {
+    var found = false;
+    var dataEdited = {
+      Name: form.name.value,
+      phoneNumber: form.phoneNumber.value,
+      pinCode: form.pinCode.value,
+      buildingName: form.building.value,
+      houseNo: form.houseNo.value,
+      floorNo: form.floorNo.value,
+      towerNo: form.towerNo.value,
+      address: form.address.value,
+      area: form.area.value,
+      city: form.city.value,
+      state: form.state.value,
+      saveAs: form.saveas.value,
+    };
+    console.log(storedAddress);
+    storedAddress.splice(index, 1);
+    storedAddress[index] = dataEdited;
+    console.log(storedAddress);
+    localStorage.setItem("savedAddresses", JSON.stringify(storedAddress));
+    displayItems(storedAddress);
+    alert("Saved New Address");
+    document.getElementById("name").value = "";
+    document.getElementById("phoneNumber").value = "";
+    document.getElementById("pinCode").value = "";
+    document.getElementById("houseNo").value = "";
+    document.getElementById("floorNo").value = "";
+    document.getElementById("towerNo").value = "";
+    document.getElementById("building").value = "";
+    document.getElementById("address").value = "";
+    document.getElementById("area").value = "";
+    document.getElementById("city").value = "";
+    document.getElementById("state").value = "";
+    document.getElementById("saveas").value = "";
+  }
+</script>
