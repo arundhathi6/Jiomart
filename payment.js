@@ -3,10 +3,6 @@ console.log(total);
 
 
 var radios = document.querySelectorAll('input[type="radio"]');
-<<<<<<< Updated upstream
-=======
-var banks = document.querySelectorAll(".icon2");
->>>>>>> Stashed changes
 
 radios.forEach((radio) => {
     var value = radio.value;
@@ -20,14 +16,6 @@ radios.forEach((radio) => {
     })
 })
 
-<<<<<<< Updated upstream
-=======
-banks.forEach((bank) => {
-    bank.addEventListener("click", payAndProceed);
-})
-
-
->>>>>>> Stashed changes
 
 document.getElementById('cardForm').addEventListener("submit", (event) => {
     event.preventDefault();
@@ -51,11 +39,7 @@ function removePayBtn(box) {
 
 function payAndProceed() {
 
-<<<<<<< Updated upstream
     alert("Order placed");
-=======
-    alert("Order placed successfully");
->>>>>>> Stashed changes
     var arr = [];
     var total = 0;
 
@@ -74,21 +58,9 @@ function thanks_window() {
     var h1 = document.createElement("h1");
     h1.setAttribute("class", "thanks-line");
     h1.innerHTML = "Thanks for shopping with us";
-<<<<<<< Updated upstream
-    var i = document.createElement("i");
-    i.style.color = "blue";
-    i.setAttribute("class", "fas");
-    i.setAttribute("class", "fa-dolly");
     var btn = document.createElement("button");
     btn.innerText = "Continue Shopping";
-=======
-
-    var btn = document.createElement("button");
-    btn.innerText = "Continue Shopping";
-    btn.addEventListener("click", () => {
-        window.location.href = "fresh fruits.html"
-    })
->>>>>>> Stashed changes
+    btn.addEventListener("click", () => {})
     btn.setAttribute("class", "continue-shopping-btn");
 
     body_box.append(h1, btn);
