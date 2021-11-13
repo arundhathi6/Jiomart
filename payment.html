@@ -1,0 +1,228 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="payment.css" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.13.0/css/all.css"
+      integrity="sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V"
+      crossorigin="anonymous"
+    />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <div class="header">
+      <div style="display: flex; margin-left: 70px">
+        <a href="finaljio.html">
+          <img src="rsc/jiomart_logo_beta (1).svg" alt=""
+        /></a>
+      </div>
+    </div>
+    <div id="body-box">
+      <div id="icons-div">
+        <h1>Payment Details</h1>
+        <div id="icons">
+          <i class="fa fa-shopping-cart" style="color: #008ecc"></i>
+          <span>Your Cart</span>
+          <div></div>
+          <i class="fa fa-clipboard" style="color: #008ecc"></i>
+          <span>Order Summary</span>
+          <div></div>
+          <i class="fa fa-credit-card" style="color: #008ecc"></i>
+          <span>Payment</span>
+        </div>
+      </div>
+      <div id="container">
+        <div id="payment-ops-box">
+          <div id="cre">
+            <h3 class="payment-type">CREDITS & POINTS</h3>
+            <div class="jio-points-box">
+              <div>
+                <label for="" class="radio-label">
+                  <input type="checkbox" name="wallet" class="check-btn" />
+                  JioMart Cashback</label
+                >
+                <p class="redeem">Max redeemable for this order</p>
+              </div>
+              <div class="jio-points">87.5</div>
+            </div>
+          </div>
+          <div id="wallet">
+            <div id="paytm">
+              <h3 class="payment-type">WALLET</h3>
+              <label for="" class="radio-label">
+                <input
+                  type="radio"
+                  name="wallet"
+                  class="radio-btn"
+                  value="paytm"
+                /><img src="rsc/Paytm_lo.png" class="icon" alt="" />
+                Paytm</label
+              >
+              <p class="offers">
+                Up to Rs. 750 Cashback on Min. Order of Rs. 750 using Paytm
+                Wallet. Assured Cashback of Rs. 30 T&C
+              </p>
+            </div>
+            <div id="phonepe">
+              <label for="" class="radio-label">
+                <input
+                  type="radio"
+                  name="wallet"
+                  class="radio-btn"
+                  value="phonepe"
+                /><img src="rsc/Phone_Pay_lo.png" class="icon" alt="" />
+                PhonePe</label
+              >
+            </div>
+            <div id="jio-money">
+              <label for="" class="radio-label">
+                <input
+                  type="radio"
+                  name="wallet"
+                  class="radio-btn"
+                  value="jio-money"
+                /><img src="rsc/jio-money.png" class="icon" alt="" /> Jio
+                Money</label
+              >
+            </div>
+            <div id="mobikwik">
+              <label for="" class="radio-label">
+                <input
+                  type="radio"
+                  name="wallet"
+                  class="radio-btn"
+                  value="mobikwik"
+                /><img src="rsc/Mobikwik_lo.png" class="icon" alt="" />
+                Mobikwik</label
+              >
+              <p class="offers">
+                Get 5% Cashback up to Rs. 50/- on Min. Order of Rs. 399/- Using
+                Mobikwik Wallet. T&C
+              </p>
+            </div>
+            <div id="freecharge">
+              <label for="" class="radio-label">
+                <input
+                  type="radio"
+                  name="wallet"
+                  class="radio-btn"
+                  value="freecharge"
+                /><img src="rsc/Free_Charge_lo.png" class="icon" alt="" />
+                freecharge</label
+              >
+              <p class="offers">
+                25% Cashback Upto Rs. 30/- on Wallet & 25% Cashback upto Rs.
+                100/- on Paylater. T&C
+              </p>
+            </div>
+          </div>
+
+          <div id="net-banking">
+            <h3 class="payment-type">NET BANKING</h3>
+            <div class="banking">
+              <div>
+                <img src="rsc/axis.png" alt="" class="icon2" />
+                <h4 class="bank-name">Axis bank</h4>
+              </div>
+              <div>
+                <img src="rsc/Hdfc.png" alt="" class="icon2" />
+                <h4 class="bank-name">HDFC bank</h4>
+              </div>
+              <div>
+                <img src="rsc/icici.png" alt="" class="icon2" />
+                <h4 class="bank-name">ICICI bank</h4>
+              </div>
+              <div>
+                <img src="rsc/kotak.png" alt="" class="icon2" />
+                <h4 class="bank-name">Kotak bank</h4>
+              </div>
+              <div>
+                <img src="rsc/Sbi.png" alt="" class="icon2" />
+                <h4 class="bank-name">SBI bank</h4>
+              </div>
+            </div>
+            <select name="" id="other-bank" class="other-bank">
+              <option value="" selected>More Banks</option>
+              <option value="bob">Bank of Baroda</option>
+              <option value="cbi">Central Bank of India</option>
+              <option value="pnb">Punjab National Bank</option>
+              <option value="united-bank">United Bank of India</option>
+              <option value="dena">Dena Bank</option>
+            </select>
+          </div>
+          <div id="card">
+            <h3 class="payment-type">CREDIT AND DEBIT CARDS</h3>
+
+            <div>
+              <form action="" id="cardForm">
+                <div>
+                  <label for="">Card Number</label><br />
+                  <input
+                    type="number"
+                    required
+                    placeholder="Card Number"
+                    required
+                  />
+                </div>
+                <div>
+                  <label for="">Expiry Date</label> <br />
+                  <input type="date" name="" id="" required />
+                </div>
+
+                <div>
+                  <label for="">CVV</label><br />
+                  <input
+                    type="number"
+                    name=""
+                    id=""
+                    required
+                    placeholder="CVV"
+                  />
+                </div>
+
+                <div>
+                  <label for="">Holder's Name</label><br />
+                  <input type="text" placeholder="Name" />
+                </div>
+                <div><input type="submit" value="Proceed" /></div>
+              </form>
+            </div>
+          </div>
+          <div id="cash">
+            <label for="" class="radio-label" id="cod">
+              <input
+                type="radio"
+                name="wallet"
+                class="radio-btn"
+                value="cash"
+              /><img src="rsc/COD.png" class="icon" alt="" /> Cash on
+              Delivery</label
+            >
+          </div>
+        </div>
+        <div id="price-box">
+          <h3>Payment details</h3>
+          <div id="mrp">
+            <p>MRP Total:</p>
+            <p id="smrp"></p>
+          </div>
+          <div id="price">
+            <p>Total Amount:</p>
+            <p id="priceT"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+<script src="payment.js"></script>
+0 comments on commit 17257b4 @vmk1803 Leave a comment No file chosen Attach
+files by dragging & dropping, selecting or pasting them. You’re not receiving
+notifications from this thread. © 2021 GitHub, Inc. Terms Privacy Security
+Status Docs Contact GitHub Pricing API Training Blog About Loading complete

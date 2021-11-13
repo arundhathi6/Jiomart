@@ -1,4 +1,4 @@
-// <<<<<<< Updated upstream
+
 var delivery = JSON.parse(localStorage.getItem("DeliveryAddress")) || "";
 var selectedAddress = JSON.parse(localStorage.getItem("savedAddresses"));
 if (delivery.length == 0) {
@@ -45,10 +45,10 @@ if (delivery.length == 0) {
         mainDiv.append(innerDiv, p1, p2, p4, p5, p6, p7, p8);
       } else if (item.floorNo == "") {
         mainDiv.append(innerDiv, p1, p3, p4, p5, p6, p7, p8);
-        console.log("Yes");
+        // console.log("Yes");
       } else {
         mainDiv.append(innerDiv, p1, p2, p3, p4, p5, p6, p7, p8);
-        console.log("Yes");
+        // console.log("Yes");
       }
       document.getElementById("wholeDiv").append(mainDiv);
     }
@@ -61,15 +61,11 @@ if (delivery.length == 0) {
   document.getElementById("addressBox").append(spanDiv);
   var buttonBox = document.createElement("div");
   var changingButton = document.createElement("button");
-  changingButton.addEventListener("click", change);
   changingButton.textContent = "Change/Add Address";
   buttonBox.append(changingButton);
   document.getElementById("buttonBox").append(buttonBox);
   document.querySelector("#wholeDiv > div:nth-Child(1)").style.paddingTop =
     "20px";
-}
-function change() {
-  window.location.href = "address.html";
 }
 var total = 0;
 var cartItems = JSON.parse(localStorage.getItem("MyCart"));
@@ -107,7 +103,7 @@ function displayCartItems(cartItems) {
     ptag.textContent = item.product_name;
     var ptag1 = document.createElement("p");
     ptag1.textContent =
-      "Rs." + Number(item.total_quantity) * Number(item.product_MRP);
+      "₹ " + Number(item.total_quantity) * Number(item.product_MRP);
     var span = document.createElement("span");
     span.textContent = "Qty:" + item.total_quantity;
     var h3 = document.createElement("h5");
@@ -143,11 +139,16 @@ if (total == totalAmount) {
   p1.textContent = "You saved" + " ₹" + (total * 10) / 100;
   document.getElementById("total").append(p1);
 }
+document
+  .querySelector("#orderContain button")
+  .addEventListener("click", changeAddress);
+function changeAddress() {
+  window.location.href = "address.html";
+}
 
 document
   .querySelector("#paymentButton button")
-  .addEventListener("click", payment);
-
-function payment() {
+  .addEventListener("click", makePayment);
+function makePayment() {
   window.location.href = "payment.html";
 }
