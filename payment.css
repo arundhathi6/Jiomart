@@ -6,6 +6,24 @@ body {
 
 #body-box {
     width: 100%;
+    margin-top: 10px;
+}
+
+.header {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 100%;
+    box-shadow: none;
+    background-color: #008ecc;
+    height: 80px;
+    z-index: 10;
+    margin-bottom: 15px;
+}
+
+.header img {
+    height: 80px;
+    width: 100px;
 }
 
 #body-box>h1 {
