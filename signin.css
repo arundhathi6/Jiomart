@@ -19,6 +19,9 @@ body{
 #picture img{
 	border-radius: 15px;
 }
+h2{
+	font-size: 28px;
+}
 #mobileNo{
 	padding-top: 30px;
 	width:60%;
@@ -61,4 +64,14 @@ span{
 	font-size:20px;
 	color:lightgray;
 	
+}
+#policy{
+    width: 280px;
+    margin-top: 60px;
+    margin-left: 470px;
+}
+
+#policy p{
+    font-size: 15px;
+    display: inline;
 }

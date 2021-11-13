@@ -61,24 +61,33 @@ small{
    margin-left: 10px;
 }
 #whatsapp{
-   background: url(https://www.jiomart.com/msassets/images/icons/whatsapp.png) left center no-repeat; 
-   height: 35px;
-   margin-top: 40px;
+    font-family: JioMedium;
+    font-size: 15px;
+    color: #000;
+    line-height: 20px;
+    margin-top: -10px;
+    background: url(https://www.jiomart.com/msassets/images/icons/whatsapp.png) left no-repeat;
+    padding: 17px 20px 0px 45px;
+    
 }
-#whatsapp h3{
-       font-size: 20px;
-       width: 350px;
-       margin-left: 50px;
-      }
-#checkbox{
+label{
+   display: inline-block;
+   width: 550px;
+}
+ #checkbox{
    width: 20px;
-   height: 20px;
-   margin-left: 490px;
-   margin-top: -300px;
+   height: 18px;
+   margin-left: 420px;  
+   margin-top: -270px;
+   margin-bottom: 60px; 
+   display: inline-block;
 }
 hr{
-   margin-top: 50px;
-   width: 350px;
+   width: 400px;
+   margin-left: 45px;
+   font-weight: 200px;
+   margin-top: -40px;
+  
 }
 input span{
    cursor: pointer;
@@ -91,12 +100,8 @@ span a :hover{
    color: grey;
 }
 .fas fa-eye-slash{
-   font-size: 20px;
+   font-size: 15px;
    color: grey;
-}
-hr{
-   width: 530px;
-   margin-left: 45px;
 }
 div span #change{
    color: red;

@@ -22,34 +22,50 @@
 
 </style>
 <body>
-<!-- 
+
   <div class="header">
     <div style="display: flex; margin-left: 70px; ">
-        <h2>JIO MART</h2>
-        <h3>Beta</h3>
+        <!-- <h2>JioMART</h2> -->
+        <div id="logo">
+          <img src="https://www.jiomart.com/assets/version1634847113/smartweb/images/jiomart_logo_beta.svg" alt=""/>
+        </div>
   
     <ul class="listMenu">
         <li>
             <input type="text" placeholder="search for items...." ><i style="margin-left: -32px; color: grey;" class="fas fa-align-justify"></i>
         </li>
-       <span class="spanMenu">
-        <li>
-            <a href="./signIn.html"><i class="fas fa-user"></i>&nbsp;&nbsp;Sign In/Sign Up</a>
+     
+        <li style="color: #fff;">
+            <a href="signin.html" style="font-size: 18px;"><i class="fas fa-user"></i>&nbsp;&nbsp;Sign In/Sign Up</a>
         </li>
-        <li><a href="./signIn.html"><i class="fas fa-shopping-cart">&nbsp;&nbsp;</i>Cart</a></li>
-       </span>
+        <li style="color: #fff;"><a href="mycart.html" style="font-size: 18px;"><i class="fas fa-shopping-cart">&nbsp;&nbsp;</i>Cart</a></li>
+  
     </ul>
 </div>
 </div>
 second header 
  <div  id="mainnav" class="mainnav secondHead">
     <ul>
-        <li><a href="deliver.html" style="text-decoration: none; color:#333;">
+        <li class="box"><a href="#popup1" class="buttonPop" style="text-decoration: none; color:#333;">
             <i class="fas fa-map-marker-alt"></i>&nbsp;&nbsp;Deliver To </a></li>
+                      <!-- popup -->
+          <div id="popup1" class="overlay">
+            <div class="popup">
+              <h4>Where do you want to delivery</h4>
+              <p>Get access to your address, Orders & Wishlists</p>
+              <div><button>Sign In to see your Address</button></div>
+              <hr>
+              <h4>Or Enter Pincode</h4>
+              <p>Select pincode to see your availablity</p>
+              <a class="close" href="#">&times;</a>
+             
+            </div>
+          </div>
+          <!-- popup end -->
         <li>
             Fruits & Vegetables <span><i class="fas fa-chevron-down"></i></span></i>
             <ul class="submenu">
-                <li><a href="#">Fresh Fruits 
+                <li><a href="fresh fruits.html">Fresh Fruits 
                 </a></li>
                 <li><a href="#">Fresh Vegetables</a></li>
                 <li><a href="#">Herbs & seasonings</a></li>
@@ -172,15 +188,15 @@ second header
 <div id="sidebarMenu" style="margin-top: -15px;">
 <ul class="sidebarMenuInner">
   <li>
-      <div id="hello" style="margin-left: -9px;margin-top: -16px;">
-      <div><p style="color: white; margin-left: 4px;">Hello, Sign In</p></div>
-      <div id="btn">
+      <div id="hello" style="margin-left: -9px;margin-top: -55px;">
+      <div><p style="color: white; margin-left: 8px;">Hello, Sign In</p></div>
+    
           <button><a href="signup.html">Account</a></button>
           <button><a href="signup.html">Order</a></button>
-      </div>
+     
     </div>
   </li>
-  <div id="container" style="background: gray;">
+  <div id="container" style="background: gray;overflow-x: hidden;">
   <div id="content1" style="background-color: white;">
   <li><a href="#">Home</a></li>
   <li><a href="#">Shop By Category</a></li>
@@ -189,28 +205,29 @@ second header
   <li><a href="#">JioMart cashback</a></li>
   <li><a href="#">All Offers</a></li>
   </div>
-<div id="content2" style="background-color: white;margin-top: 14px;">
-<li>My Account</li>
-<li>Need Help</li>
-<li>About Us</li>
-<li>Guide</li>
+
+<div id="content2" style="background-color: white;">
+<li><a href="#">My Account</a></li>
+<li><a href="#">Need Help</a></li>
+<li><a href="#">About Us</a></li>
+<li><a href="#">Guide</a></li>
 </div>
 <div id="content3" style="background-color: white;margin-top: -15px;">
-<h3>ContactUs</h3>
-<li>WhatsApp us : 70003 70003</li>
-<li>Call Us : 1800 890 1222</li>
-<li>8:00 AM to 8:00 PM, 365 days</li>
-<li>Please note that you are accessing the BETA Version of www.jiomart.com</li>
-<li id="smaltext">Should you encounter any bugs, glitches, lack of functionality, 
+<h3 style="font-weight: 600px;">ContactUs</h3>
+<p>WhatsApp us : <span>70003 70003</span></p>
+<p>Call Us : <span>1800 890 1222</span></p>
+<p>8:00 AM to 8:00 PM, 365 days</p>
+<p>Please note that you are accessing the BETA Version of www.jiomart.com</p>
+<p id="smaltext">Should you encounter any bugs, glitches, lack of functionality, 
 delayed deliveries, billing errors or other problems 
-on the beta website, please email us on cs@jiomart.com</li>
+on the beta website, please email us on cs@jiomart.com</p>
 <h3>DOWNLOAD APP</h3>
 <div class="divv" style="display: inline;"><img src="https://www.jiomart.com/images/cms/wysiwyg/app-icons/ios_store.png"/></div>
 <div class="divv" style="display: inline;"><img src="https://www.jiomart.com/images/cms/wysiwyg/app-icons/ios_store.png"/></div>
  
 </ul>
 </div>
-</div> -->
+</div>
 
 
 
@@ -250,7 +267,7 @@ on the beta website, please email us on cs@jiomart.com</li>
   <p>An example of using buttons to indicate how many slides there are in the slideshow, and which slide the user is currently viewing.</p>
 </div> -->
 
-<div class="w3-content w3-display-container" style="max-width:1900px">
+<div class="w3-content w3-display-container" style="max-width:1900px;margin-top: -650px;z-index: -2;">
   <img class="mySlides" src="https://www.jiomart.com/images/cms/aw_rbslider/slides/1626448409_soapweb.jpg" >
   <img class="mySlides" src="https://www.jiomart.com/images/cms/aw_rbslider/slides/1636130744_Non_winter_11.jpg">
   <img class="mySlides" src="https://www.jiomart.com/images/cms/aw_rbslider/slides/1632591867_web_main_home_kitchen.jpg">
