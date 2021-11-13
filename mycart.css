@@ -1,0 +1,578 @@
+@import url("https://fonts.googleapis.com/css?family=Varela+Round");
+html,
+body {
+  overflow-x: hidden;
+  height: 100%;
+}
+body {
+  background: #fff;
+  padding: 0;
+  margin: 0;
+  font-family: "Varela Round", sans-serif;
+}
+.header {
+  border: 1px solid none;
+  display: flex;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 100%;
+  box-shadow: none;
+  background-color: #008ecc;
+  position: fixed;
+  /* height: 80px !important; */
+  overflow: hidden;
+  z-index: 10;
+}
+.listMenu {
+  display: flex;
+  /* position: relative; */
+  top: 10px;
+  align-items: center;
+  justify-content: space-between;
+}
+.listMenu li {
+  padding-left: 40px;
+  list-style-type: none;
+}
+.spanMenu {
+  float: right;
+  display: flex;
+  color: #fff;
+}
+li input {
+  width: 700px;
+  /* padding: 15px; */
+  height: 30px;
+  border-radius: 5px;
+  border-color: transparent;
+}
+li button {
+  background: transparent;
+  border: 1px solid #fff;
+  padding: 8px 20px;
+  background-color: rgb(131, 139, 207);
+  font-size: 18px;
+  color: #fff;
+}
+/* .header h3 {
+  font-weight: bolder;
+  font-size: 23px;
+  color: #fff;
+} */
+.header img {
+  border: 1px solid none;
+  margin-top: 20px;
+  height: 30px;
+}
+.secondHead {
+  background-color: rgb(197, 197, 197);
+  padding: 5px 20px;
+  padding-left: 150px;
+  position: relative;
+  top: 50px;
+  display: flex !important;
+}
+.secondHead ul {
+  display: flex;
+}
+.secondHead li {
+  list-style-type: none;
+  color: #333;
+  padding-left: 20px;
+  font-size: 14px;
+  position: relative;
+  top: 10px;
+}
+.sidebarIconToggle {
+  transition: all 0.3s;
+  box-sizing: border-box;
+  cursor: pointer;
+  position: absolute;
+  border: 1px solid none;
+  z-index: 99;
+  height: 100%;
+  width: 100%;
+  top: 22px;
+  left: 15px;
+  height: 22px;
+  width: 22px;
+}
+.spinner {
+  transition: all 0.3s;
+  box-sizing: border-box;
+  position: absolute;
+  height: 3px;
+  width: 100%;
+  background-color: #fff;
+  top: 10px;
+}
+.horizontal {
+  transition: all 0.3s;
+  box-sizing: border-box;
+  position: relative;
+  float: left;
+  margin-top: 3px;
+}
+.diagonal.part-1 {
+  position: relative;
+  transition: all 0.3s;
+  box-sizing: border-box;
+  float: left;
+}
+.diagonal.part-2 {
+  transition: all 0.3s;
+  box-sizing: border-box;
+  position: relative;
+  float: left;
+  margin-top: 3px;
+}
+input[type="checkbox"]:checked ~ .sidebarIconToggle > .horizontal {
+  transition: all 0.3s;
+  box-sizing: border-box;
+  opacity: 0;
+}
+input[type="checkbox"]:checked ~ .sidebarIconToggle > .diagonal.part-1 {
+  transition: all 0.3s;
+  box-sizing: border-box;
+  transform: rotate(135deg);
+  margin-top: 8px;
+}
+input[type="checkbox"]:checked ~ .sidebarIconToggle > .diagonal.part-2 {
+  transition: all 0.3s;
+  box-sizing: border-box;
+  transform: rotate(-135deg);
+  margin-top: -9px;
+}
+.main {
+  margin: 0 auto;
+  display: block;
+  height: 100%;
+  margin-top: 60px;
+}
+.mainInner {
+  display: table;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+}
+.mainInner div {
+  display: table-cell;
+  vertical-align: middle;
+  font-size: 3em;
+  font-weight: bold;
+  letter-spacing: 1.25px;
+}
+#sidebarMenu {
+  height: 100%;
+  position: fixed;
+  left: 0;
+  width: 250px;
+  margin-top: 60px;
+  transform: translateX(-250px);
+  transition: transform 250ms ease-in-out;
+  background: #fff;
+  box-shadow: 5px 5px 10px;
+}
+#sidebarMenu li,
+#sidebarMenu li a {
+  color: #333 !important;
+  border-bottom: 1px solid rgb(163, 163, 163);
+}
+.sidebarMenuInner {
+  margin: 0;
+  padding: 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+.sidebarMenuInner li {
+  list-style: none;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: bold;
+  padding: 20px;
+  cursor: pointer;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+.sidebarMenuInner li span {
+  display: block;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.5);
+}
+.sidebarMenuInner li a {
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: bold;
+  cursor: pointer;
+  text-decoration: none;
+}
+input[type="checkbox"]:checked ~ #sidebarMenu {
+  transform: translateX(0);
+}
+
+input[type="checkbox"] {
+  transition: all 0.3s;
+  box-sizing: border-box;
+  display: none;
+}
+#mainnav {
+  padding-bottom: 0px;
+  /* margin-top: 10px; */
+}
+#mainnav ul.submenu {
+  position: absolute;
+  left: 10px;
+  top: 100%;
+  width: 200px;
+  text-align: left;
+  background-color: rgb(236, 236, 237);
+  display: block;
+  z-index: 9999;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  filter: alpha(opacity=0);
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+#mainnav ul.submenu li:first-child {
+  border-top: none;
+}
+.submenu li {
+  width: 190px;
+  padding-right: 0px;
+}
+
+.submenu > li > a {
+  display: block;
+  width: 450px;
+  color: #333;
+  text-decoration: none;
+  padding: 0 0 0 1px;
+  line-height: 45px;
+  margin-left: -60px;
+  border-radius: 5px;
+}
+.submenu li a:hover {
+  color: #008ecc;
+  background-color: #fff;
+  width: 150px;
+  padding-left: -90px;
+}
+#mainnav ul li:hover > ul.submenu {
+  top: 100%;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+  filter: alpha(opacity=100);
+  opacity: 1;
+  visibility: visible;
+}
+.divv img {
+  width: 90px;
+  height: 30px;
+  margin-bottom: 80px;
+  display: inline-block;
+}
+
+/* css popup */
+.secondHead li {
+  border: 1px solid none;
+  padding-left: 20px;
+  margin-left: 10px;
+}
+.secondHead {
+  background-color: rgb(236, 236, 237);
+  padding: 5px 20px;
+  /* position: relative; */
+  /* top: 20px; */
+  display: flex !important;
+}
+.secondHead ul {
+  display: flex;
+}
+.secondHead li {
+  list-style-type: none;
+  color: #333;
+  /* padding-left: 100px; */
+  /* position: relative; */
+  top: 10px;
+}
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  transition: opacity 500ms;
+  visibility: hidden;
+  opacity: 0;
+  z-index: 999;
+}
+.overlay:target {
+  visibility: visible;
+  opacity: 1;
+}
+
+.popup {
+  margin: 70px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 5px;
+  width: 30%;
+  position: relative;
+  transition: all 5s ease-in-out;
+}
+.popup p {
+  font-size: 11px;
+}
+.popup h4 {
+  color: #333;
+  font-weight: 600;
+  font-size: 16px;
+}
+.popup button {
+  background-color: #178ddb;
+  color: #fff;
+  width: 100%;
+  padding: 8px 20px;
+  border-radius: 8px;
+}
+.popup .close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  transition: all 200ms;
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #333;
+}
+.popup .close:hover {
+  color: #06d85f;
+}
+.popup .content {
+  max-height: 30%;
+  overflow: auto;
+}
+
+@media screen and (max-width: 700px) {
+  .box {
+    width: 70%;
+  }
+  .popup {
+    width: 70%;
+  }
+}
+#container {
+  height: 400px;
+  overflow-x: scroll;
+  background-color: grey;
+}
+#container #content1 {
+  font-weight: normal;
+}
+#content1 li a {
+  font-weight: 400 !important;
+  font-size: 14px;
+}
+#container #content2 {
+  font-weight: normal;
+}
+#container #content3 {
+  font-weight: normal;
+  margin-top: 10px;
+}
+#content3 h3 {
+  font-size: 15px;
+  font-weight: 800px !important;
+  position: relative;
+  left: 10px;
+}
+#content3 span {
+  color: #178ddb;
+  text-decoration: underline;
+}
+#content3 p {
+  font-size: 13px;
+  position: relative;
+  left: 10px;
+}
+#summaryContainer {
+  border: 1px solid none;
+  margin-top: 50px;
+  display: flex;
+}
+/* #summaryContainer > div {
+  border: 1px soid red;
+  margin-top: 50px;
+} */
+#orderContain {
+  border: 1px solid none;
+  margin-left: 2%;
+  font-size: 16px;
+  width: 58%;
+  font-family: sans-serif;
+}
+#cartItems {
+  border: 1px solid none;
+  margin-top: 20px;
+  margin-left: 2%;
+  /* width: 60%; */
+}
+#cartItems > div {
+  display: flex;
+}
+#cartItems > div div {
+  border: 1px solid none;
+  margin-right: 20px;
+}
+#cartItems > div:nth-child(1) {
+  justify-content: space-between;
+}
+#cartItems p {
+  font-size: 18px;
+  font-weight: 550;
+}
+span {
+  display: block;
+}
+#app {
+  display: flex;
+}
+#icons {
+  border: 1px solid none;
+  display: flex;
+  justify-content: space-between;
+  font-size: 25px;
+  vertical-align: middle;
+  /* margin-top: 2%;*/
+}
+#icons div {
+  height: 1px;
+  background-color: #aeaeae;
+  width: 20%;
+  border: 1px solid none;
+  margin-top: 10px;
+  display: inline-block;
+  vertical-align: bottom;
+}
+h5 {
+  text-align: right;
+  color: #aeaeae;
+}
+#icons span {
+  font-size: 10px;
+  text-align: center;
+  margin-top: 8px;
+  font-weight: 550;
+}
+#paymentContain {
+  border: 1px solid none;
+  width: 40%;
+  margin-left: 2%;
+  margin-top: 2%;
+  margin-right: 2%;
+  font-family: sans-serif;
+}
+#coupon {
+  width: 100%;
+  height: 120px;
+
+  margin-bottom: 20px;
+  padding-top: 10px;
+  background-color: white;
+}
+#coupon > div {
+  width: 100%;
+  height: 30%;
+
+  margin-bottom: 7px;
+}
+#box1 {
+  display: flex;
+}
+#box1 > #sub1 {
+  width: 78%;
+  margin-right: 10px;
+  padding: 10px;
+  font-weight: bolder;
+  font-size: 20px;
+}
+#box1 > #sub2 {
+  width: 24%;
+  padding: 10px;
+  color: rgb(229, 21, 0);
+  font-size: 12px;
+  font-weight: bolder;
+}
+#div2 > #logo {
+  width: 30%;
+  margin-right: 50px;
+}
+#box2 {
+  display: flex;
+}
+#box2 > #logo {
+  width: 12%;
+}
+#box2 > #tub2 {
+  width: 58%;
+  margin-right: 10px;
+  padding: 10px;
+}
+#box2 > #tub3 {
+  width: 21%;
+  padding: 10px;
+  text-align: left;
+  font-size: 12px;
+  color: rgb(127, 127, 127);
+  font-weight: bolder;
+}
+#logo > img {
+  width: 100%;
+  height: 100%;
+}
+#mrpTotal,
+#mrpTotal ~ div {
+  border: 1px solid none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #aeaeae;
+}
+#total {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+#total h3 {
+  color: black;
+  flex-basis: 50%;
+}
+#total h3:nth-child(2) {
+  text-align: end;
+}
+#total p {
+  flex-basis: 100%;
+  text-align: end;
+  color: green;
+}
+#matterBox {
+  width: 100%;
+}
+#paymentButton {
+  display: flex;
+  border: 1px solid none;
+  justify-content: flex-end;
+}
+#paymentButton button {
+  background-color: #008ecc;
+  color: white;
+  width: 200px;
+  height: 50px;
+  border-radius: 5px;
+  border: 1px solid none;
+  margin-left: 60%;
+}
