@@ -1,3 +1,4 @@
+
 var delivery = JSON.parse(localStorage.getItem("DeliveryAddress")) || "";
 var selectedAddress = JSON.parse(localStorage.getItem("savedAddresses"));
 if (delivery.length == 0) {
@@ -102,7 +103,7 @@ function displayCartItems(cartItems) {
     ptag.textContent = item.product_name;
     var ptag1 = document.createElement("p");
     ptag1.textContent =
-      "Rs." + Number(item.total_quantity) * Number(item.product_MRP);
+      "₹ " + Number(item.total_quantity) * Number(item.product_MRP);
     var span = document.createElement("span");
     span.textContent = "Qty:" + item.total_quantity;
     var h3 = document.createElement("h5");
@@ -138,7 +139,16 @@ if (total == totalAmount) {
   p1.textContent = "You saved" + " ₹" + (total * 10) / 100;
   document.getElementById("total").append(p1);
 }
-document.querySelector("button").addEventListener("click", changeAddress);
+document
+  .querySelector("#orderContain button")
+  .addEventListener("click", changeAddress);
 function changeAddress() {
   window.location.href = "address.html";
+}
+
+document
+  .querySelector("#paymentButton button")
+  .addEventListener("click", makePayment);
+function makePayment() {
+  window.location.href = "payment.html";
 }
