@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>signup</title>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" 
+    integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+     crossorigin="anonymous"/>
+    <link rel="stylesheet" href="signup.css">
+</head>
+ <body>
+   <div class="login" id="container">
+        <div id="picture"><img src="https://www.jiomart.com/msassets/images/login-banner.jpg" alt=""></div>
+        <div id="details">
+            <h1 class="title">Sign Up</h1>
+            <p>Please Enter Your Details</p>
+             <div><input id="fname" type="text" placeholder=" your first Name"></div>
+             <div id="alert"><p>Please enter your name</p></div>
+             <div><input id="lname" type="text" placeholder="Enter Last Name"></div>
+             <div><input id="email" type="text" placeholder="Enter Email Id"></div>
+             <div><input id="pass" type="text" placeholder="Enter Your Password">
+            <span>
+               <a href="#"><i class="fas fa-eye-slash" aria-hidden="true" class="eye"></a></i>
+            </span>
+        </div>
+             <small>Use 8 or more characters with a mix of letters & numbers</small>
+
+             <div><input id="pass2" type="text" placeholder="Check Password">
+                <span>
+                    <a href="#"><i class="fas fa-eye-slash"></a></i>
+                 </span></div>
+             <div id="whatsapp"><label><h4 style="width: 350px; margin-top: 60px;">Enable order updates and important information on Whatsapp 
+                <input type="checkbox" id="checkbox"> </h4>
+            </label></div>
+              <hr>
+             <div>
+                 <h1>Verify</h1>
+             </div>
+             <div>
+                 <h3 style="font-weight: 100;"><span style="display: inline-flex;">Enter the 6 digit OTP sent your Mobile Number<span> <p id="displayMobile"></p></span>
+                   
+                    <a href="signin.html" id="change" style="margin-left: 170px; font-weight: bold;">Change</a>
+                </span></h3>
+               
+             </div>
+             <div><input id="lname" type="text" placeholder="Enter otp"></div>
+             <span><a href="signin.html" id="resend" style="margin-left: 520px;
+                     color: red; text-decoration: none; font-size: 16px;font-weight: bold;">Resend OTP</a></span>
+
+
+             <button id="submit">Verify</button>
+             <div id="policy"><span><p>By continuing you agree to our</p><p style="color: red;"> Terms of service</p>
+               <p> and</p> <p style="color: red;">Privacy & Legal Policy</p>.</span></div>
+        </div>
+      
+    </div>
+   
+</body>
+</html>
+<script src="signup.js">
+    
+</script>
