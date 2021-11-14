@@ -1,0 +1,137 @@
+body{
+    background-color:white;
+}
+#container{
+   width:80%;
+   border:none;
+   margin:auto;
+   height:750px;
+   border-radius: 20px;
+   margin-top: 4%;
+  
+}
+#picture{
+   width:40%;
+   float: left;
+   height:100%;
+   border-radius: 60px;
+}
+#picture img{
+   border-radius: 15px;
+   margin-left: -30px;
+}
+#details{
+  height: 100%;
+  margin-left: 47%;
+}
+.title{
+   margin-top: -10px;
+}
+.title h1{
+   font-size: 28px;
+}
+p{
+   font-size: 20px;
+   margin-top: -15px;
+   margin-left: 10px;
+   font-weight: 50;
+}
+div input{
+   width: 480px;
+   margin-top: 35px;
+   margin-left: 5px;
+   height: 45px;
+   border-radius: 5px ;
+   border-color: transparent;
+   box-sizing: border-box;
+   padding: 10px 10px;
+
+}
+::placeholder{
+   color: rgb(218, 216, 216);
+   font-size: 20px;
+   font-family: 'Times New Roman', Times, serif;
+}
+div #alert p{
+   font-size: 15px;
+   color: red;
+   margin-top: 3px;
+}
+small{
+   margin-left: 10px;
+}
+#whatsapp{
+    font-family: JioMedium;
+    font-size: 15px;
+    color: #000;
+    line-height: 20px;
+    margin-top: -10px;
+    background: url(https://www.jiomart.com/msassets/images/icons/whatsapp.png) left no-repeat;
+    padding: 17px 20px 0px 45px;
+    
+}
+label{
+   display: inline-block;
+   width: 550px;
+}
+ #checkbox{
+   width: 20px;
+   height: 18px;
+   margin-left: 420px;  
+   margin-top: -270px;
+   margin-bottom: 60px; 
+   display: inline-block;
+}
+hr{
+   width: 400px;
+   margin-left: 45px;
+   font-weight: 200px;
+   margin-top: -40px;
+  
+}
+input span{
+   cursor: pointer;
+   transform: translate(0, -50%);
+   margin-top: 20px;
+   right: 50px;
+   
+}
+span a :hover{
+   color: grey;
+}
+.fas fa-eye-slash{
+   font-size: 15px;
+   color: grey;
+}
+div span #change{
+   color: red;
+   text-decoration: none;
+}
+a #change{
+   color: red; 
+   text-decoration: none;
+}
+
+#submit{
+   width: 650px;
+   background-color: #008ecc;
+   color: white;
+   font-size: 23px;
+   height: 45px;
+   border-color: transparent;
+   cursor: pointer;
+   margin-top: 30px;
+}
+#policy{
+   width: 340px;
+   margin-top: 40px;
+   margin-left: -300px;
+}
+#policy p{
+   font-size: 15px;
+   display: inline;
+}
+#displayMobile{
+    border:none;
+    margin-top: 5px;
+}
