@@ -48,4 +48,4 @@
 - How to be a good Team Player
 - Managing code using Git
 - Git commands
-- Project Presenting 
+- Project Presention
