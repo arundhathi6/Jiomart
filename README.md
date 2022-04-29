@@ -15,16 +15,7 @@
 - CSS
 - JS
 
-# Run Locally
 
-- To run this project locally follow following steps below
-- Create folder in your local system
-
-Clone the Project
-
-`git pull https://github.com/arundhathi6/Jiomart.git`
-
-- Now the project is ready just go and visit home page.
 
 # Sceenshots
 
