@@ -22,7 +22,7 @@
 
 Clone the Project
 
-`git pull https://github.com/vmk1803/Jiomart.git`
+`git pull https://github.com/arundhathi6/Jiomart.git`
 
 - Now the project is ready just go and visit home page.
 
