@@ -4,7 +4,7 @@
 
 # Authors
 
-- [Arundhathi](https://github.com/arundhathi6/Jiomart)
+- [Murali Krishna](https://github.com/vmk1803)
 - [Soumili](https://github.com/Sou156)
 - [Mounika](https://github.com/monika-4oop)
 - [Sheelu](https://github.com/sheeluofficial)
